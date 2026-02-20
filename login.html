@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulir Pendaftaran | AzwaLib</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-<header>
-    <div class="logo">Azwa Lib</div>
-    <nav>
-        <a href="index.html">Home</a>
-    </nav>
-</header>
-
 <div class="form-container">
     <h2>FORMULIR PENDAFTARAN</h2>
 
-    <input type="text" id="firstName" placeholder="First Name" required>
-    <input type="text" id="lastName" placeholder="Last Name" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <input type="text" id="phone" placeholder="No Handphone" required>
-    <input type="password" id="password" placeholder="Password" required>
+    <input type="text" id="firstName" placeholder="First Name">
+    <input type="text" id="lastName" placeholder="Last Name">
+    <input type="text" id="phone" placeholder="No Handphone">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
 
-    <button class="btn-green" onclick="register()">DAFTAR / LOGIN</button>
+    <button class="btn-green" onclick="register()">DAFTAR</button>
+
+    <hr style="margin:30px 0;">
+
+    <h2>LOGIN</h2>
+
+    <input type="text" id="firstNameLogin" placeholder="First Name">
+    <input type="text" id="lastNameLogin" placeholder="Last Name">
+    <input type="password" id="passwordLogin" placeholder="Password">
+
+    <button class="btn-green" onclick="login()">LOGIN</button>
 </div>
-
-<script src="js/script.js"></script>
-</body>
-</html>
