@@ -239,3 +239,54 @@ footer h4 {
 .btn-green:hover {
     background: #27ae60;
 }
+
+/* ================= CONTACT US ================= */
+
+.contact-container {
+    max-width: 600px;
+    margin: 100px auto;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-container textarea {
+    height: 120px;
+    resize: none;
+}
+
+.btn-contact {
+    background: #2ecc71;
+    color: white;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background: #27ae60;
+}
