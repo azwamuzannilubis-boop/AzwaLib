@@ -1,43 +1,63 @@
 // ================= REGISTER =================
 function register() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const firstName = document.getElementById("regFirstName").value;
+    const lastName = document.getElementById("regLastName").value;
+    const phone = document.getElementById("regPhone").value;
+    const email = document.getElementById("regEmail").value;
+    const password = document.getElementById("regPassword").value;
 
-    localStorage.setItem("email", email);
+    if (!firstName || !lastName || !phone || !email || !password) {
+        alert("Harap isi semua data!");
+        return;
+    }
+
+    localStorage.setItem("firstName", firstName);
+    localStorage.setItem("lastName", lastName);
     localStorage.setItem("password", password);
+    localStorage.setItem("isLogin", "true");
 
     alert("Pendaftaran berhasil!");
+    window.location.href = "index.html";
 }
 
 // ================= LOGIN =================
 function login() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const firstName = document.getElementById("loginFirstName").value;
+    const lastName = document.getElementById("loginLastName").value;
+    const password = document.getElementById("loginPassword").value;
 
     if (
-        email === localStorage.getItem("email") &&
+        firstName === localStorage.getItem("firstName") &&
+        lastName === localStorage.getItem("lastName") &&
         password === localStorage.getItem("password")
     ) {
-        window.location.href = "home.html";
+        localStorage.setItem("isLogin", "true");
+        window.location.href = "index.html";
     } else {
-        alert("Email atau Password salah!");
+        alert("Data login salah!");
     }
 }
 
-// ================= CONTACT =================
-function kirimPesan() {
-    const nama = document.getElementById("nama").value;
-    const email = document.getElementById("emailContact").value;
-    const pesan = document.getElementById("pesan").value;
-
-    if (nama === "" || email === "" || pesan === "") {
-        alert("Harap isi semua field!");
-        return;
+// ================= CEK LOGIN =================
+function checkLogin() {
+    if (localStorage.getItem("isLogin") !== "true") {
+        window.location.href = "login.html";
     }
+}
 
-    localStorage.setItem("nama", nama);
-    localStorage.setItem("emailContact", email);
-    localStorage.setItem("pesan", pesan);
+// ================= LOGOUT =================
+function logout() {
+    localStorage.removeItem("isLogin");
+    window.location.href = "login.html";
+}
 
-    alert("Pesan berhasil dikirim!");
+// ================= TOGGLE =================
+function showRegister() {
+    document.getElementById("loginForm").classList.add("hidden");
+    document.getElementById("registerForm").classList.remove("hidden");
+}
+
+function showLogin() {
+    document.getElementById("registerForm").classList.add("hidden");
+    document.getElementById("loginForm").classList.remove("hidden");
 }
