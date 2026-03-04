@@ -61,3 +61,11 @@ function showLogin() {
     document.getElementById("registerForm").classList.add("hidden");
     document.getElementById("loginForm").classList.remove("hidden");
 }
+
+const buttons = document.querySelectorAll(".btn-lelang");
+
+buttons.forEach(button => {
+    button.addEventListener("click", function() {
+        alert("Terima kasih! Silakan hubungi petani melalui menu Kontak untuk negosiasi lebih lanjut.");
+    });
+});
