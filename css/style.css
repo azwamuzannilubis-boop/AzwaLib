@@ -60,21 +60,6 @@ nav a:hover {
     background:#43a047;
 }
 
-/* LOGIN BUTTON */
-.login-btn {
-    background: #81C784;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-weight: 600;
-    margin-left: 25px;
-    transition: 0.3s;
-}
-
-.login-btn:hover {
-    background: #81C784
-    color: white;
-}
-
 /* ================= HERO ================= */
 .hero {
     height: 90vh;
@@ -99,8 +84,8 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    background: #81C784;
-    color: #F5F5DC;
+    background: #1B5E20;;
+    color: white;
     padding: 14px 30px;
     border-radius: 40px;
     text-decoration: none;
@@ -109,7 +94,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: cream;
+    background: #2E7D32;
 }
 
 /* ================= CV SECTION ================= */
